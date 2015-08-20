@@ -83,6 +83,7 @@ aside {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    height: 75px;
 }
 
 .navbar-default .navbar-header .navbar-brand {
@@ -122,10 +123,14 @@ aside {
 }
 
 .navbar-brand {
-	background: url('../img/witslogo.png') no-repeat 15%;
+
+}
+
+.navbar-logo {
+	background: url('../img/witslogo.png') no-repeat;
 	background-size: 100%;
-	width: 150px;
-	height: 65px;
+	width: 165px;
+	height: 55px;
 }
 
 @media(min-width:768px) {
@@ -241,6 +246,10 @@ header .header-content .header-content-inner p {
         font-size: 18px;
         text-align: left;
         max-width: 80%;
+    }
+    
+    .navbar-nav {
+    	margin-top: 10px;
     }
 }
 
