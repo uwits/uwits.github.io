@@ -1,0 +1,12 @@
+# Site settings
+title: WITS
+email: contact@uowits.com
+description: > # this means to ignore newlines until "baseurl:"
+  WITS is a student club at the University of Wollongong.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://uowits.com" # the base hostname & protocol for your site
+twitter_username: uowits
+github_username:  uwits
+
+# Build settings
+markdown: kramdown
