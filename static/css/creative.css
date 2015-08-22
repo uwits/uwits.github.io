@@ -77,13 +77,13 @@ aside {
 }
 
 .navbar-default {
-    border-color: rgba(34,34,34,.05);
+	border: none!important;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     background-color: #0ba649;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
-    height: 75px;
+    min-height: 75px;
 }
 
 .navbar-default .navbar-header .navbar-brand {
@@ -122,8 +122,8 @@ aside {
     background-color: transparent;
 }
 
-.navbar-brand {
-
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: none;
 }
 
 .navbar-logo {
@@ -159,7 +159,7 @@ aside {
     }
 
     .navbar-default.affix {
-        border-color: rgba(34,34,34,.05);
+        border: none;
         background-color: #0ba649;
     }
 
@@ -190,12 +190,21 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/header2.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    display:table;
+}
+
+.header-inside {
+	height: 100%;
+	width: 100%;
+	background: url(../img/headeroverlay.png) no-repeat center;
+	background-size: cover;
+	display:table-cell;
 }
 
 header .header-content {
@@ -220,7 +229,7 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
-    color: rgba(255,255,255,.8);
+    color: rgba(255,255,255,1);
 }
 
 @media(min-width:768px) {
