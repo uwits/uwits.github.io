@@ -25,7 +25,7 @@ hr.light {
 }
 
 a {
-    color: #f05f40;
+    color: #0ba649;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -52,7 +52,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #0ba649;
 }
 
 .bg-dark {
@@ -216,7 +216,7 @@ header .header-content {
 
 header .header-content .header-content-inner h1 {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -346,7 +346,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #f05f40;
+    color: #0ba649;
 }
 
 .no-gutter > [class*=col-] {
@@ -371,7 +371,7 @@ header .header-content .header-content-inner p {
 .open > .dropdown-toggle.btn-default {
     border-color: #ededed;
     color: #222;
-    background-color: #f2f2f2;
+    background-color: #d5eee5;
 }
 
 .btn-default:active,
