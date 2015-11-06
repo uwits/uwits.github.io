@@ -291,8 +291,12 @@ header .header-content .header-content-inner p {
     	margin-top: 10px;
     }
 
-    #footer p {
+    .footer-left p {
         text-align: left !important;
+    }
+
+    .social-logos p {
+        text-align: right !important;
     }
 }
 
@@ -566,6 +570,22 @@ h3 {
 }
 
 #footer a {
+    color: #767676;
+}
+
+.social-logos p {
+    text-align: center;
+    margin-bottom: 25px !important;
+}
+
+.social-logos .btn {
+    width: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    background: #ebebeb;
+}
+
+.social-logos i {
     color: #767676;
 }
 
