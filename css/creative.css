@@ -588,3 +588,43 @@ h3 {
     font-size: 11px;
     margin-bottom: 10px;
 }
+
+/* Individual Event Page */
+
+.event-sidebar h4 {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.event-sidebar img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.event-sidebar p {
+    font-size: 13px;
+}
+
+.event-sidebar .date {
+    margin-bottom: 4px;
+}
+
+#shareicons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#shareicons li {
+    float: left;
+    margin-right: 10px;
+}
+
+#shareicons .fbshare {
+    background: #36609f;
+}
+
+#shareicons .tshare {
+    background: #00abee;
+}

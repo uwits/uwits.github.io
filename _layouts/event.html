@@ -1,0 +1,39 @@
+---
+layout: page
+---
+
+<section id="page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-push-8 event-sidebar">
+                <img src="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" />
+
+                <h4>Dates</h4>
+                <p class="date"><strong>Start:</strong> {{ page.startdate | date: "%-d %B %Y %l:%M %p" }}</p>
+                <p class="date"><strong>End:</strong> {{ page.enddate | date: "%-d %B %Y %l:%M %p" }}</p>
+
+                {% if page.location %}
+                <h4>Location</h4>
+                <p>{{ page.location }}</p>
+                {% endif %}
+
+                {% if page.showshareicons == 1 %}
+                <ul id="shareicons">
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-primary fbshare"><i class="fa fa-facebook"></i> Share</a></li>
+                    <li><a href="https://twitter.com/share?url={{ site.domain | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-primary tshare"><i class="fa fa-twitter"></i> Tweet</a></li>
+                </ul>
+
+                {% endif %}
+            </div>
+
+            <div class="col-md-8 col-md-pull-4">
+                <h3>Event Description</h3>
+                {{ content }}
+
+                {% if page.rsvpurl %}
+                <a class="btn btn-primary" href="{{ page.rsvpurl }}">Click Here to RSVP</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
