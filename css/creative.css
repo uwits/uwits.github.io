@@ -152,11 +152,30 @@ aside {
 	border: none;
 }
 
+.navbar-collapse {
+    margin-top: 25px;
+}
+
 .navbar-logo {
 	background: url('../img/witslogo.png') no-repeat;
 	background-size: 100%;
 	width: 165px;
 	height: 55px;
+}
+
+.navbar-toggle {
+    background: #0b7239;
+    border: none;
+    margin: 15px 15px 0;
+    padding: 15px 16px;
+}
+
+.navbar-toggle:hover {
+    background: #0b5c2e !important;
+}
+
+.navbar-toggle span {
+    background-color: white !important;
 }
 
 @media(min-width:768px) {
@@ -297,6 +316,10 @@ header .header-content .header-content-inner p {
 
     .social-logos p {
         text-align: right !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 0;
     }
 }
 
@@ -548,6 +571,12 @@ h3 {
     border-bottom: 2px solid #1fbf49;
     padding-bottom: 4px;
     color: #333;
+}
+
+h3 span {
+    font-size: 13px;
+    float: right;
+    margin-top: 7px;
 }
 
 #footer {

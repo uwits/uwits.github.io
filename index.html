@@ -2,7 +2,7 @@
 layout: homepage
 title: Home
 ---
-<section class="bg-primary" id="about">
+    <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -11,6 +11,37 @@ title: Home
                     <p class="text-faded">WITS is a society for UOW students interested in IT. Members can socialise, work together on projects and gain exposure in the industry. We have members interested in programming, networking, gaming - really, anything related to computers!</p>
                     <p class="text-faded">WITS run a number of events throughout session to benefit members. Past events have included Drive With WITS, High iTea, Linux Installfest and Hackagong.</p>
                     <a href="#" class="btn btn-default btn-xl">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsevents">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 event-listing">
+                    <h3>Next Event <span><a href="/events/">view more</a></span></h3>
+                    {% assign events = site.events | sort: 'startdate' | limit:1 %}
+                    {% assign todaysTime = site.time | date: "%s" %}
+
+                    {% for event in events %}
+                        {% assign enddatetimestamp = event.enddate | date: "%s" %}
+
+                        {% if enddatetimestamp > todaysTime %}
+                            {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+
+                            {% if count == '1' %}
+                                <a href="{{ event.url }}"><img src="{% if event.image %}{{ event.image }}{% else %}/img/events/noimage.jpg{% endif %}" /></a>
+                                <a href="{{ event.url }}"><h4>{{ event.title }}</h4></a>
+                                <p class="date"><i class="fa fa-clock-o"></i> {{ event.startdate | date: "%-d %B %Y %l:%M %p" }}</p>
+                                <p>{{ event.excerpt }}</p>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="col-md-9">
+                    test
                 </div>
             </div>
         </div>
