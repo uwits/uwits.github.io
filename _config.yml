@@ -5,7 +5,7 @@ description: >
   WITS is a student club at the University of Wollongong.
 baseurl: "/"
 url: "/"
-domain: "http://uowits.com"
+domain: "http://beta.uowits.com"
 twitter_username: uowits
 github_username:  uwits
 
