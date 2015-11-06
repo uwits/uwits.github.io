@@ -32,10 +32,10 @@ permalink: /events/
 				<div class="row">
 					<!-- sort the events by end date and then loop through them -->
 					<!-- This will only show events that have past -->
-					{% assign events = site.events | sort: 'startdate' | limit: 5 %}
+					{% assign events = site.events | sort: 'startdate' | limit: 6 %}
 					{% assign todaysTime = site.time | date: "%s" %}
 
-					{% for event in events %}
+					{% for event in events reversed %}
 					{% assign enddatetimestamp = event.enddate | date: "%s" %}
 					{% if enddatetimestamp < todaysTime %}
 					<div class="col-md-6 col-sm-6 event-listing">
