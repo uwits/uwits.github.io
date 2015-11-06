@@ -10,3 +10,8 @@ github_username:  uwits
 
 # Build settings
 markdown: kramdown
+
+collections:
+ events:
+  output: true
+  permalink: /events/:path/

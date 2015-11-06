@@ -568,3 +568,23 @@ h3 {
 #footer a {
     color: #767676;
 }
+
+/* Events Page */
+
+.event-listing h4 {
+
+}
+
+.event-listing p {
+    font-size: 12px;
+}
+
+.event-listing img {
+    width: 100%;
+}
+
+.event-listing .date {
+    color: #767676;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
