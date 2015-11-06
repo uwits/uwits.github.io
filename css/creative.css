@@ -685,3 +685,11 @@ h3 span {
 #shareicons .tshare {
     background: #00abee;
 }
+
+#newsevents {
+    padding: 25px 0;
+}
+
+#newsevents h3 {
+    margin-top: 0px;
+}

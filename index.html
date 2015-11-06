@@ -20,10 +20,11 @@ title: Home
         <div class="container">
             <div class="row">
                 <div class="col-md-3 event-listing">
-                    <h3>Next Event <span><a href="/events/">view more</a></span></h3>
-                    {% assign events = site.events | sort: 'startdate' | limit:1 %}
+                    <h3>Next Event <span><a href="/events/">view more <i class="fa fa-arrow-circle-right"></i></a></span></h3>
+                    {% assign events = site.events | sort: 'startdate' %}
                     {% assign todaysTime = site.time | date: "%s" %}
 
+                    {% capture count %}0{% endcapture %}
                     {% for event in events %}
                         {% assign enddatetimestamp = event.enddate | date: "%s" %}
 
@@ -38,63 +39,30 @@ title: Home
                             {% endif %}
                         {% endif %}
                     {% endfor %}
+
+                    {% if count == "0" %}
+                        <p>Sorry! We're not running any events right now. Check back soon.</p>
+                    {% endif %}
                 </div>
 
                 <div class="col-md-9">
-                    test
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
+                    <h3>Featured</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            test
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--<aside class="bg-dark">
+    <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+                <h2>Join WITS</h2>
+                <p>If you love tech, then we'd love to have you.</p>
+                <a href="#" class="btn btn-default btn-xl wow tada">Find Out More</a>
             </div>
         </div>
-    </aside>  -->
+    </aside>
