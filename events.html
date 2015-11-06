@@ -7,12 +7,7 @@ permalink: /events/
 <section id="page">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 calendar">
-				<h3>Calendar</h3>
-				<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTz=0&amp;src=uowits.com_pbstd3r9too2h2eq238gcjs7c8%40group.calendar.google.com&ctz=Australia/Sydney" style="border: 0" height="600" frameborder="0" scrolling="no"></iframe>
-			</div>
-			
-			<div class="col-md-6 event-list">
+			<div class="col-md-6 col-md-push-6 event-list">
 				<h3>Upcoming Events</h3>
 				<div class="row">
 					<!-- sort the events by end date and then loop through them -->
@@ -32,6 +27,31 @@ permalink: /events/
 						{% endif %}
 					{% endfor %}
 				</div>
+
+				<h3>Recent Events</h3>
+				<div class="row">
+					<!-- sort the events by end date and then loop through them -->
+					<!-- This will only show events that have past -->
+					{% assign events = site.events | sort: 'startdate' | limit: 5 %}
+					{% assign todaysTime = site.time | date: "%s" %}
+
+					{% for event in events %}
+					{% assign enddatetimestamp = event.enddate | date: "%s" %}
+					{% if enddatetimestamp < todaysTime %}
+					<div class="col-md-6 event-listing">
+						<a href="{{ event.url }}"><img src="{% if event.image %}{{ event.image }}{% else %}/img/events/noimage.jpg{% endif %}" /></a>
+						<a href="{{ event.url }}"><h4>{{ event.title }}</h4></a>
+						<p class="date"><i class="fa fa-clock-o"></i> {{ event.startdate | date: "%-d %B %Y %l:%M %p" }}</p>
+						<p>{{ event.excerpt }}</p>
+					</div>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="col-md-6 col-md-pull-6 calendar">
+				<h3>Calendar</h3>
+				<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTz=0&amp;src=uowits.com_pbstd3r9too2h2eq238gcjs7c8%40group.calendar.google.com&ctz=Australia/Sydney" style="border: 0" height="600" frameborder="0" scrolling="no"></iframe>
 			</div>
 		</div>
 	</div>
