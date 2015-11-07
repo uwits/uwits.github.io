@@ -561,6 +561,14 @@ body {
 	margin-right: 10px;
 }
 
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
 .calendar iframe {
     width: 100%;
 }
@@ -692,4 +700,8 @@ h3 span {
 
 #newsevents h3 {
     margin-top: 0px;
+}
+
+.fb-page {
+    width: 100%;
 }
