@@ -63,6 +63,38 @@
 
     {% include footer.html %}
 
+    <!-- jQuery -->
+    <script src="{{ site.url }}js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ site.url }}js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ site.url }}js/jquery.easing.min.js"></script>
+    <script src="{{ site.url }}js/jquery.fittext.js"></script>
+    <script src="{{ site.url }}js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ site.url }}js/creative.js"></script>
+
+  <script>
+      var imageIndex = 0;
+      var imagesArray = [
+      {% for image in site.data.homeimages %}
+      "{{ image }}",
+      {% endfor %}
+      ];
+
+      function changeBackground(){
+          var index = imageIndex++ % imagesArray.length;
+          $("header").css("background-image","url('"+ imagesArray[index] +"')");
+      }
+
+      $(document).ready(function() {
+          setInterval(changeBackground, 10000);
+      });
+  </script>
+
   </body>
 
 </html>
