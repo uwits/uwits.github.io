@@ -94,6 +94,14 @@ aside {
 	text-align: center;
 }
 
+#pageheader h3 {
+    border: 0;
+    padding: 0;
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+    color: #073313;
+}
+
 #page {
 	padding-top: 10px;
 }
@@ -231,6 +239,11 @@ aside {
     #pageheader h2 {
 		text-align: left;
 	}
+
+    #pageheader h3 {
+        text-align: left;
+        padding-top: 25px;
+    }
 }
 
 header {
@@ -704,4 +717,10 @@ h3 span {
 
 .fb-page {
     width: 100%;
+}
+
+.blog-content img {
+    width: 100%;
+    margin-bottom: 15px;
+
 }

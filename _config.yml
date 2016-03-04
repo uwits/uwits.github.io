@@ -16,3 +16,6 @@ collections:
  events:
   output: true
   permalink: /events/:path/
+ exec:
+  output: true
+  permalink: /exec/:path/

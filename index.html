@@ -45,10 +45,16 @@ title: Home
                 </div>
 
                 <div class="col-md-9">
-                    <h3>Featured</h3>
+                    <h3>LATEST POSTS</h3>
                     <div class="row">
                         <div class="col-md-4">
-                            test
+                            {% for post in site.posts %}
+                            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            {% endfor %}
+                            <br />
+                            {% for exec in site.exec %}
+                                {{ exec.excerpt }}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
