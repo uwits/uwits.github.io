@@ -42,6 +42,18 @@
         }
     })
 
+    $(document).ready(function() {
+        $('.image-popup').magnificPopup({
+            type: 'image',
+            delegate: 'img',
+            closeOnContentClick: true,
+            image: {
+                verticalFit: true
+            }
+        });
+
+    });
+
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 

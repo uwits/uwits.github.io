@@ -49,7 +49,7 @@ title: Home
                     <div class="row">
                         <div class="col-md-4">
                             {% for post in site.posts %}
-                            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
                             {% endfor %}
                             <br />
                             {% for exec in site.exec %}

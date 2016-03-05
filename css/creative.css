@@ -413,6 +413,10 @@ header .header-content .header-content-inner p {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
     }
+
+    .event-listing .event-image {
+        height: 150px!important;
+    }
 }
 
 .call-to-action h2 {
@@ -659,6 +663,18 @@ h3 span {
     margin-bottom: 10px;
 }
 
+.event-listing .event-image {
+    height: 200px;
+    width: 100%;
+    background-size: cover!important;
+}
+
+.event-listing .event-image a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
 /* Individual Event Page */
 
 .event-sidebar h4 {
@@ -678,6 +694,11 @@ h3 span {
 
 .event-sidebar .date {
     margin-bottom: 4px;
+}
+
+.event-sidebar .image-popup p {
+    font-size: 10px;
+    margin-top: 0px;
 }
 
 .event-content img {

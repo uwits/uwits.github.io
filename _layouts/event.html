@@ -6,7 +6,11 @@ layout: page
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-push-8 event-sidebar">
-                <img src="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" />
+                <div class="image-popup">
+                    <img href="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" src="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" />
+                    <p><i class="fa fa-info-circle"></i> Click image to view larger</p>
+                </div>
+
 
                 <h4>Dates</h4>
                 <p class="date"><strong>Start:</strong> {{ page.startdate | date: "%-d %B %Y %l:%M %p" }}</p>
@@ -27,11 +31,19 @@ layout: page
             </div>
 
             <div class="col-md-8 col-md-pull-4 event-content">
+                {% assign enddatetimestamp = page.enddate | date: "%s" %}
+                {% assign todaysTime = site.time | date: "%s" %}
+                {% if enddatetimestamp < todaysTime %}
+                    <div class="alert alert-danger">
+                        <strong>Heads Up!</strong> This is a past event. It ran in {{ page.startdate | date: "%B %Y" }}.
+                    </div>
+                {% endif %}
+
                 <h3>Event Description</h3>
                 {{ content }}
 
                 {% if page.rsvpurl %}
-                <a class="btn btn-primary" href="{{ page.rsvpurl }}">Click Here to RSVP</a>
+                <a class="btn btn-primary" style="margin-top: 15px;" href="{{ page.rsvpurl }}">Click Here to RSVP</a>
                 {% endif %}
 
                 {% if page.mapsharelink %}
