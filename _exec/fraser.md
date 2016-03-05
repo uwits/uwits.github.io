@@ -1,10 +1,10 @@
 ---
 layout: exec
-sort: 6
-title: Stewart Wilson
-position: Events Coordinator
+sort: 8
+title: Fraser Marnham
+position: First Year Representative
 excerpt: "Stewart is the Events...."
-image:  
+image: /img/execs/fraser.jpg
 ---
 
 This is markdown. You can **bold** things.

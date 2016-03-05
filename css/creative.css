@@ -746,3 +746,23 @@ h3 span {
     margin-bottom: 15px;
 
 }
+
+.exec-row .exec {
+
+}
+
+.exec-row .exec h1 {
+    font-size: 22px!important;
+    margin: 10px 0px 0px 0px;
+}
+
+.exec-row .exec h2 {
+    font-size: 15px!important;
+    margin: 5px 0px 0px 0px;
+}
+
+.exec-row .exec .exec-image {
+    width: 100%;
+    height: 150px;
+    background-size: cover!important;
+}
