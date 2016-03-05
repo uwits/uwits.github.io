@@ -766,3 +766,28 @@ h3 span {
     height: 150px;
     background-size: cover!important;
 }
+
+.about-stats .col-md-4 {
+    min-height: 120px;
+    background: #10772b;
+    border: 1px solid #1bb942;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-stats .col-md-4 i {
+    color: white;
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.about-stats .col-md-4 h1 {
+    color: white;
+    font-size: 15px!important;
+}
+
+.about-stats .col-md-4 h1 span {
+    font-weight: bold;
+    font-size: 18px!important;
+}
+
