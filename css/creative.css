@@ -259,6 +259,7 @@ header {
     background-size: cover;
     -o-background-size: cover;
     display:table;
+    transition: background 0.5s linear;
 }
 
 .header-inside {
