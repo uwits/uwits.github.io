@@ -1,7 +1,7 @@
 ---
 layout: exec
 sort: 10
-title: Allison Haire
+title: Alison Haire
 position: Diversity Coordinator
 excerpt: "Allison is the Events...."
 image:  
