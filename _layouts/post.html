@@ -8,6 +8,20 @@ layout: default
       <div class="col-lg-12">
         <h3>THE WITS BLOG</h3>
         <h2 style="padding-top: 0px;">{{ page.title }}</h2>
+
+        {% for exec in site.exec %}
+        {% if page.author == exec.title %}
+        {% assign authorname = exec.title %}
+        {% assign authorimage = exec.image %}
+        {% assign authorposition = exec.position %}
+        {% endif %}
+        {% endfor %}
+
+        {% if authorname %}
+        <h4>Posted by <span>{{ authorname }}</span> ({{ authorposition }}) on {{ page.date | date: "%-d %B %Y %l:%M %p" }}</h4>
+        {% else %}
+        <h4>Posted by: <span>{{ page.author }}</span> (Guest Author) on {{ page.date | date: "%-d %B %Y %l:%M %p" }}</h4>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -16,7 +30,7 @@ layout: default
 <section id="page">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 blog-content">
+      <div class="col-md-8 col-md-push-2 blog-content">
         <img src="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" />
 
         {{ content }}
@@ -28,16 +42,6 @@ layout: default
         </ul>
         <div style="clear: both;"></div>
         {% endif %}
-      </div>
-
-      <div class="col-md-4 blog-sidebar">
-        {% assign author = site.exec[stewart] %}
-
-        {{ author.title }}
-
-        {% for exec in site.exec %}
-        {{ exec.title }}
-        {% endfor %}
       </div>
     </div>
   </div>

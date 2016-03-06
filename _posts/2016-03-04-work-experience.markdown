@@ -2,9 +2,10 @@
 layout: post
 title:  "Getting work experience without getting work experience"
 date:   2016-03-04 20:34:46
-categories: uow
-execid: stewart
+categories: blog
+author: "James Rule"
 showshareicons: 1
+image:
 ---
 People put a lot of value in work experience and industry placement. This is a good thing as this sort of experience provides practical hands on experience in the environment which the majority of IT and Comp/Sci students anticipate they will work in after their degree.
 However, there is also some danger with this logic because it assumes you need to be in the “industry” to get hands on experience. This is certainly true for most professions, but what do you need before you can do work in IT?

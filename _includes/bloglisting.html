@@ -1,0 +1,9 @@
+<div class="col-md-6 col-sm-6 post-listing">
+    <div class="post-image" style="background: url({% if post.image %}{{ post.image }}{% else %}/img/events/noimage.jpg{% endif %})">
+        <a href="{{ post.url }}"></a>
+    </div>
+
+    <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+    <p class="date"><i class="fa fa-user"></i> {{ post.author }} <i class="fa fa-clock-o"></i> {{ post.date | date: "%-d %B %Y %l:%M %p" }}</p>
+    <p>{{ post.excerpt }}</p>
+</div>

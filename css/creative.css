@@ -81,16 +81,15 @@ aside {
 }
 
 #pageheader {
-	height: 150px;
-	padding: 0;
+	min-height: 110px;
+	padding: 25px 0px 25px 0px;
 }
 
 #pageheader h2 {
 	color: white;
-	padding: 50px 0px 50px 0px;
 	margin: 0;
 	text-transform: uppercase;
-	font-size: 45px;
+	font-size: 25px;
 	text-align: center;
 }
 
@@ -100,6 +99,16 @@ aside {
     margin: 20px 0px 0px 0px;
     text-align: center;
     color: #073313;
+}
+
+#pageheader h4 {
+    font-size: 15px;
+    color: #073313;
+    text-align: center;
+}
+
+#pageheader h4 span {
+    font-weight: bold;
 }
 
 #page {
@@ -238,11 +247,15 @@ aside {
     
     #pageheader h2 {
 		text-align: left;
+        font-size: 45px;
 	}
 
     #pageheader h3 {
         text-align: left;
-        padding-top: 25px;
+    }
+
+    #pageheader h4 {
+        text-align: left;
     }
 }
 
@@ -417,6 +430,14 @@ header .header-content .header-content-inner p {
 
     .event-listing .event-image {
         height: 150px!important;
+    }
+
+    .exec-row .exec .exec-image {
+        height: 150px!important;
+    }
+
+    .post-list .post-image {
+        height: 300px!important;
     }
 }
 
@@ -763,7 +784,7 @@ h3 span {
 
 .exec-row .exec .exec-image {
     width: 100%;
-    height: 150px;
+    height: 200px;
     background-size: cover!important;
 }
 
@@ -791,3 +812,43 @@ h3 span {
     font-size: 18px!important;
 }
 
+/* Blog Page */
+
+.post-list h4 {
+
+}
+
+.post-list p {
+    font-size: 12px;
+}
+
+.post-list img {
+    width: 100%;
+}
+
+.post-list .date {
+    color: #767676;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.post-list .post-image {
+    height: 200px;
+    width: 100%;
+    background-size: cover!important;
+}
+
+.post-list .post-image a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.home-latestpost h2 {
+    font-size: 17px;
+    margin: 10px 0px 10px 0px;
+}
+
+.home-latestpost p {
+    font-size: 14px;
+}

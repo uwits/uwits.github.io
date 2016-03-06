@@ -45,11 +45,16 @@ title: Home
                 </div>
 
                 <div class="col-md-9">
-                    <h3>LATEST POSTS</h3>
-                        <div class="row">
-                            {% for post in site.posts %}
-                            <div class="col-md-3">
-                                <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+                    <h3>LATEST POST</h3>
+                        <div class="row home-latestpost">
+                            {% for post in site.posts limit:1 %}
+                            <div class="col-md-4 col-md-push-8">
+                                <a href="{{ post.url }}"><img src="{% if post.image %}{{ post.image }}{% else %}/img/events/noimage.jpg{% endif %}" style="width: 100%;" /></a>
+                            </div>
+                            <div class="col-md-8 col-md-pull-4">
+                                <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+                                {{ post.excerpt }}
+                                <a href="{{ post.url }}">Read More <i class="fa fa-arrow-circle-right"></i></a>
                             </div>
                             {% endfor %}
                         </div>

@@ -1,0 +1,39 @@
+---
+layout: page
+title: Witerature
+permalink: /blog/
+---
+
+<section id="page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 post-list">
+				<!-- sort the events by end date and then loop through them -->
+				<!-- This will only show events that have past -->
+				{% assign posts = site.posts | sort: 'date' %}
+
+				{% capture pecount %}0{% endcapture %}
+				{% for post in posts reversed %}
+					{% capture pecount %}{{ pecount | plus: '1' }}{% endcapture %}
+					{% assign loopindex = pecount | plus: 1 %}
+					{% assign rowfinder = pecount | modulo: 2 %}
+
+					{% if rowfinder == 1 %}
+					<div class="row">
+						{% include bloglisting.html %}
+					{% elsif rowfinder == 0 %}
+						{% include bloglisting.html %}
+					</div>
+					{% else %}
+					{% include bloglisting.html %}
+					{% endif %}
+
+				{% endfor %}
+
+				{% if rowfinder != 0 %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
