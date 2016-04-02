@@ -12,6 +12,7 @@ membercount: 569
 
 # Build settings
 markdown: kramdown
+future: true
 
 collections:
  events:
