@@ -2,7 +2,7 @@
 layout: exec
 sort: 6
 title: Stewart Wilson
-position: Events Coordinator
+position: Executive Team
 excerpt: "Stewart is the Events...."
 image: /img/execs/stewart.jpg 
 ---

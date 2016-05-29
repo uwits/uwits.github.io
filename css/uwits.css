@@ -891,3 +891,51 @@ h3 span {
     color: white;
     font-size: 20px;
 }
+
+.about {
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.about .whoarewe h1, .about .whyjoin h1 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about .whoarewe p {
+    font-size: 14px;
+}
+
+.about .whyjoin ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.about .whyjoin li {
+    padding-left: 1.3em;
+    margin-bottom: 5px;
+}
+
+.about .whyjoin li:before {
+    content: "\f164"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
+.about .cta {
+    background: #0ba649;
+    padding: 30px;
+    color: white;
+}
+
+.about .cta h1 {
+    text-transform: uppercase;
+}
+
+.about .cta .signupbutton {
+    background: #0b5a2d;
+    padding: 10px;
+}

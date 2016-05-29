@@ -40,3 +40,5 @@ Firm team guidelines and “lines in the sand” are what keeps the team from de
 
 That’s the end of this installment. In our next blog post, we’ll go through some pointers for the big day - Tradeshow. Stay tuned.
 
+###### Image attribution: hackNY.org on Flickr (https://www.flickr.com/photos/hackny/7036223605/)
+

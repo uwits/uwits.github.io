@@ -2,7 +2,7 @@
 layout: exec
 sort: 7
 title: Benjamin Darbyshire
-position: Marketing Coordinator
+position: Executive Team
 excerpt: "Benjamin is the Events...."
 image:  /img/execs/ben.jpg
 ---

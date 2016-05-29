@@ -2,7 +2,7 @@
 layout: exec
 sort: 3
 title: Aaron Lozenkovski
-position: Secretary
+position: Vice President
 excerpt: "Aaron is the Events...."
 image: /img/execs/aaron.jpg
 ---

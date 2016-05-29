@@ -2,7 +2,7 @@
 layout: exec
 sort: 9
 title: Alex Tan
-position: Awesomeness Coordinator
+position: Executive Team
 excerpt: "Alex is the Events...."
 image:  
 ---
