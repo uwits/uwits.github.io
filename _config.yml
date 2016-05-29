@@ -1,11 +1,10 @@
 # Site settings
 title: Wollongong IT Society (WITS)
 email: contact@uowits.com
-description: >
-  WITS is a student club at the University of Wollongong.
+description: WITS is a student club at the University of Wollongong.
 baseurl: "/"
 url: "/"
-domain: "http://beta.uowits.com"
+domain: "http://www.uowits.com"
 twitter_username: uowits
 github_username:  uwits
 membercount: 569
