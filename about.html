@@ -52,16 +52,16 @@ image: /img/exec_clubsnight.jpg
 			<div class="col-md-12">
 				<h3>The Executive</h3>
 				<div class="row exec-row">
-					{% assign execs = site.exec| sort: 'sort' %}
+					{% assign execs = site.exec %}
 					{% for exec in execs %}
-						<div class="col-md-3 exec">
-							<div class="exec-image" style="background: url({% if exec.image %}{{ exec.image }}{% else %}/img/events/noimage.jpg{% endif %})">
-								<a href="{{ exec.url }}"></a>
-							</div>
-
-							<h1>{{ exec.title }}</h1>
-							<h2>{{ exec.position }}</h2>
+					<div class="col-md-3 exec">
+						<div class="exec-image" style="background: url({% if exec.image %}{{ exec.image }}{% else %}/img/events/noimage.jpg{% endif %})">
+							<a href="{{ exec.url }}"></a>
 						</div>
+
+						<h1>{{ exec.title }}</h1>
+						<h2>{{ exec.position }}</h2>
+					</div>
 					{% endfor %}
 				</div>
 
