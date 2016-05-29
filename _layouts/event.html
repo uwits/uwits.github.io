@@ -1,0 +1,56 @@
+---
+layout: page
+---
+
+<section id="page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-push-8 event-sidebar">
+                <div class="image-popup">
+                    <img href="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" src="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" />
+                    <p><i class="fa fa-info-circle"></i> Click image to view larger</p>
+                </div>
+
+
+                <h4>Dates</h4>
+                <p class="date"><strong>Start:</strong> {{ page.startdate | date: "%-d %B %Y %l:%M %p" }}</p>
+                <p class="date"><strong>End:</strong> {{ page.enddate | date: "%-d %B %Y %l:%M %p" }}</p>
+
+                {% if page.location %}
+                <h4>Location</h4>
+                <p>{{ page.location }}</p>
+                {% endif %}
+
+                {% if page.showshareicons == 1 %}
+                <ul id="shareicons">
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-primary fbshare"><i class="fa fa-facebook"></i> Share</a></li>
+                    <li><a href="https://twitter.com/share?url={{ site.domain | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-primary tshare"><i class="fa fa-twitter"></i> Tweet</a></li>
+                </ul>
+                <div style="clear: both;"></div>
+                {% endif %}
+            </div>
+
+            <div class="col-md-8 col-md-pull-4 event-content">
+                {% assign enddatetimestamp = page.enddate | date: "%s" %}
+                {% assign todaysTime = site.time | date: "%s" %}
+                {% if enddatetimestamp < todaysTime %}
+                    <div class="alert alert-danger">
+                        <strong>Heads Up!</strong> This is a past event. It ran in {{ page.startdate | date: "%B %Y" }}.
+                    </div>
+                {% endif %}
+
+                <h3>Event Description</h3>
+                {{ content }}
+
+                {% if page.rsvpurl %}
+                <a class="btn btn-primary" style="margin-top: 15px;" href="{{ page.rsvpurl }}">Click Here to RSVP</a>
+                {% endif %}
+
+                {% if page.mapsharelink %}
+                <h3>Map</h3>
+                <iframe src="{{ page.mapsharelink }}" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<section class="bg-pageheader" id="pageheader" style="margin-top: 75px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>THE WITS BLOG</h3>
+        <h2 style="padding-top: 0px;">{{ page.title }}</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 blog-content">
+        <img src="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" />
+
+        {{ content }}
+
+        {% if page.showshareicons == 1 %}
+        <ul id="shareicons">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-primary fbshare"><i class="fa fa-facebook"></i> Share</a></li>
+          <li><a href="https://twitter.com/share?url={{ site.domain | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-primary tshare"><i class="fa fa-twitter"></i> Tweet</a></li>
+        </ul>
+        <div style="clear: both;"></div>
+        {% endif %}
+      </div>
+
+      <div class="col-md-4 blog-sidebar">
+
+        {% for exec in site.exec %}
+        {{ exec.title }}
+          {% if exec.name == 'stewart' %}
+            {{ exec.title }}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

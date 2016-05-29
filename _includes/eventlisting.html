@@ -1,0 +1,9 @@
+<div class="col-md-3 col-sm-3 event-listing">
+    <div class="event-image" style="background: url({% if event.image %}{{ event.image }}{% else %}/img/events/noimage.jpg{% endif %})">
+        <a href="{{ event.url }}"></a>
+    </div>
+
+    <a href="{{ event.url }}"><h4>{{ event.title }}</h4></a>
+    <p class="date"><i class="fa fa-clock-o"></i> {{ event.startdate | date: "%-d %B %Y %l:%M %p" }}</p>
+    <p>{{ event.excerpt }}</p>
+</div>

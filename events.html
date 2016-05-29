@@ -1,0 +1,70 @@
+---
+layout: page
+title: Events
+permalink: /events/
+---
+
+<section id="page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 event-list">
+				<h3>Upcoming Events</h3>
+				<div class="row">
+					<!-- sort the events by end date and then loop through them -->
+					<!-- This will only show events that haven't finished yet -->
+					{% assign events = site.events | sort: 'startdate' %}
+					{% assign todaysTime = site.time | date: "%s" %}
+
+					{% capture uecount %}0{% endcapture %}
+					{% for event in events %}
+						{% assign enddatetimestamp = event.enddate | date: "%s" %}
+						{% if enddatetimestamp > todaysTime %}
+						{% capture uecount %}{{ uecount | plus: '1' }}{% endcapture %}
+							<div class="col-md-6 col-sm-6 event-listing">
+								<a href="{{ event.url }}"><img src="{% if event.image %}{{ event.image }}{% else %}/img/events/noimage.jpg{% endif %}" /></a>
+								<a href="{{ event.url }}"><h4>{{ event.title }}</h4></a>
+								<p class="date"><i class="fa fa-clock-o"></i> {{ event.startdate | date: "%-d %B %Y %l:%M %p" }}</p>
+								<p>{{ event.excerpt }}</p>
+							</div>
+						{% endif %}
+					{% endfor %}
+
+					{% if uecount == "0" %}
+						<div class="col-md-12">Sorry! We're not running any events right now. Check back soon.</div>
+					{% endif %}
+				</div>
+
+				<h3>Past Events</h3>
+				<!-- sort the events by end date and then loop through them -->
+				<!-- This will only show events that have past -->
+				{% assign events = site.events | sort: 'startdate' | limit: 6 %}
+				{% assign todaysTime = site.time | date: "%s" %}
+
+				{% capture pecount %}0{% endcapture %}
+				{% for event in events reversed %}
+				{% assign enddatetimestamp = event.enddate | date: "%s" %}
+				{% if enddatetimestamp < todaysTime %}
+					{% capture pecount %}{{ pecount | plus: '1' }}{% endcapture %}
+					{% assign loopindex = pecount | plus: 1 %}
+					{% assign rowfinder = pecount | modulo: 4 %}
+
+					{% if rowfinder == 1 %}
+					<div class="row">
+						{% include eventlisting.html %}
+					{% elsif rowfinder == 0 %}
+						{% include eventlisting.html %}
+					</div>
+					{% else %}
+					{% include eventlisting.html %}
+					{% endif %}
+
+				{% endif %}
+				{% endfor %}
+
+				{% if rowfinder != 0 %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

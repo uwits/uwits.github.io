@@ -1,15 +1,48 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+<section class="bg-pageheader" id="pageheader" style="margin-top: 75px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>THE WITS BLOG</h3>
+        <h2 style="padding-top: 0px;">{{ page.title }}</h2>
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+        {% for exec in site.exec %}
+        {% if page.author == exec.title %}
+        {% assign authorname = exec.title %}
+        {% assign authorimage = exec.image %}
+        {% assign authorposition = exec.position %}
+        {% endif %}
+        {% endfor %}
 
-</div>
+        {% if authorname %}
+        <h4>Posted by <span>{{ authorname }}</span> ({{ authorposition }}) on {{ page.date | date: "%-d %B %Y %l:%M %p" }}</h4>
+        {% else %}
+        <h4>Posted by: <span>{{ page.author }}</span> (Guest Author) on {{ page.date | date: "%-d %B %Y %l:%M %p" }}</h4>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-push-2 blog-content">
+        <img src="{% if page.image %}{{ page.image }}{% else %}/img/events/noimage.jpg{% endif %}" />
+
+        {{ content }}
+
+        {% if page.showshareicons == 1 %}
+        <ul id="shareicons">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.domain | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-primary fbshare"><i class="fa fa-facebook"></i> Share</a></li>
+          <li><a href="https://twitter.com/share?url={{ site.domain | cgi_escape }}{{ page.url | cgi_escape }}" class="btn btn-primary tshare"><i class="fa fa-twitter"></i> Tweet</a></li>
+        </ul>
+        <div style="clear: both;"></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

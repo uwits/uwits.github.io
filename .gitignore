@@ -1,3 +1,7 @@
 _site
 .sass-cache
 .project
+/.idea/
+.jekyll-metadata
+.buildpath
+org.eclipse.*

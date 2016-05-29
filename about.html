@@ -1,0 +1,78 @@
+---
+layout: page
+title: About
+permalink: /about/
+image: /img/exec_clubsnight.jpg
+---
+
+<section id="page">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<img src="{{ page.image }}" style="width: 100%;" />
+
+				<h2>WITS is the Wollongong Information Technology Society at the University of Wollongong.</h2>
+
+				<p>Hi! We are WITS, the University of Wollongong Information Technology Society (almost as bad as S.H.I.E.L.D). We are a society for UOW students interested in technology and the IT community. Members can socialise, work together on projects, learn about technology and gain exposure in the industry. We have members interested in programming, networking, gaming - really, anything related to computers!</p>
+
+				<p>WITS run a number of events throughout session to benefit members. Past events have included Drive With WITS, High iTea, Linux Installfest and Hackagong. Our aim is to ensure that the IT community at UOW and the Illawarra prosper, with those involved gaining invaluable experience and knowledge for the future.</p>
+
+				<p>We like to mix things up a little bit, ensuring that there are a good mixture of fun and entertaining events as well as industry and experience based workshops and events. WITS has some cool tech that we love to show to those around campus. We love to see members getting involved in the development of the society and, if you’re interested, we enjoy assisting members in kickstarting IT related events around campus.</p>
+
+			</div>
+			
+			<div class="col-md-4">
+				<h3 style="margin-top: 0px;">The Stats</h3>
+
+				<div class="row about-stats">
+					<div class="col-md-4 col-md-offset-1">
+						<i class="fa fa-group"></i>
+						<h1><span>{{ site.exec | size }}</span> Executive Members</h1>
+					</div>
+
+					<div class="col-md-4 col-md-offset-1">
+						<i class="fa fa-user-plus"></i>
+						<h1><span>{{ site.membercount }}</span> Members</h1>
+					</div>
+
+					<div class="col-md-4 col-md-offset-1">
+						<i class="fa fa-calendar"></i>
+						<h1><span>{{ site.events | size }}</span> Events</h1>
+					</div>
+
+					<div class="col-md-4 col-md-offset-1">
+						<i class="fa fa-thumbs-up"></i>
+						<h1><span>0</span> Reasons Not To Join</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>The Executive</h3>
+				<div class="row exec-row">
+					{% assign execs = site.exec| sort: 'sort' %}
+					{% for exec in execs %}
+						<div class="col-md-3 exec">
+							<div class="exec-image" style="background: url({% if exec.image %}{{ exec.image }}{% else %}/img/events/noimage.jpg{% endif %})">
+								<a href="{{ exec.url }}"></a>
+							</div>
+
+							<h1>{{ exec.title }}</h1>
+							<h2>{{ exec.position }}</h2>
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="row exec-row">
+					<div class="col-md-12">
+						<div class="well">
+							<strong>This could be you!</strong> We're always looking for people to join our team. If you've got ideas, wanting to show off your skills and need another excuse to be on campus, join WITS! <a href="/contact/">Get In Contact <i class="fa fa-arrow-circle-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
