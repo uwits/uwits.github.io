@@ -7,7 +7,7 @@ author: "Benjamin Darbyshire and Stewart Wilson"
 showshareicons: 1
 image: /img/blog/uow_itproject_1.jpg
 ---
-All students completing anyone of the UOW IT based degrees will have the option to take part in a year long subjected based around a real life project. Before 2016, the subject was compulsory for all students but has since been made an option. It is arguably one of the hardest, yet fulfilling subjects that you have the option of doing. Hair will be lost, sleep will little (especially by the end) and by the end, you’ll just want it to be over. However, the feeling of accomplishment once Tradeshow is over is one of the best feelings ever.
+All students completing any one of the UOW IT based degrees will have the option to take part in a year long subjected based around a real life project. Before 2016, the subject was compulsory for all students but has since been made an option. It is arguably one of the hardest, yet fulfilling subjects that you have the option of doing. Hair will be lost, sleep will little (especially by the end) and by the end, you’ll just want it to be over. However, the feeling of accomplishment once Tradeshow is over is one of the best feelings ever.
 
 The following are some tips on surviving the UOW IT Project subject from the 2014 and 2015 UOW Tradeshow winners for Best Project. Stewart’s team won the 2014 Tradeshow with their personal training app, Bounce. Benjamin’s team won the 2015 Tradeshow with their health data analytics application, Public Health Portal. Benjamin and Stewart are Executives of WITS.
 
