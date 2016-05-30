@@ -7,7 +7,7 @@ url: "/"
 domain: "http://www.uowits.com"
 twitter_username: uowits
 github_username:  uwits
-membercount: 569
+membercount: 595
 
 # Build settings
 markdown: kramdown
